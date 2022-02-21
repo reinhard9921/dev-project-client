@@ -29,15 +29,15 @@ input[type=text]:focus {
   color: black;
 }
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: black;
+  color: grey;
   opacity: 1; /* Firefox */
 }
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: black;
+  color: grey;
 }
 
 ::-ms-input-placeholder { /* Microsoft Edge */
-  color: black;
+  color: grey;
 }
 button {
   background-color: #FF3366; /* Green */
@@ -62,22 +62,21 @@ button:hover {
   background-color: rgba(255, 255, 255, 0.288);
   backdrop-filter: blur(5px);
   border-radius: 25px;
-  width: 500px;
-  height: 380px;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   font-weight: bold;
+display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
 }
 
 .content
 {
-  position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
+  alignSelf:'baseline';
 }
 body
 {
