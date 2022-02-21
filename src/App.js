@@ -30,7 +30,7 @@ function AddUserApp(props) {
     setheightError('Enter valid number');
     }
 
-    if(typeof _userName === 'undefined'){
+    if(!_userName){
       setnameError('Enter a name');
     }
     
