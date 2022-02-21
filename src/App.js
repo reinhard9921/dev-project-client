@@ -25,7 +25,7 @@ function AddUserApp(props) {
       setEmailError('Enter valid email');
     }
 
-    const regexNumber = /^[0-9\b]$/i;
+    const regexNumber = /^[0-9\b]+$/;
     if(!_userHeight || regexNumber.test(_userHeight) === false){
     setheightError('Enter valid number');
     }
