@@ -34,7 +34,7 @@ function AddUserApp(props) {
       setnameError('Enter a name');
     }
     
-    if(typeof _userName !== 'undefined' && _userHeight && regexNumber.test(_userHeight) === true && _userEmail && regexemail.test(_userEmail) === true)
+    if(_userName && _userHeight && regexNumber.test(_userHeight) === true && _userEmail && regexemail.test(_userEmail) === true)
     {
       handleSubmit();
 
