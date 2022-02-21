@@ -81,7 +81,7 @@ function AddUserApp(props) {
     <div className="App">
       <div className="page_wrap">
         <form onSubmit={emailValidation}>
-        <br/><br/>
+        <br/>
         <h2>Please enter your height</h2>
         <h3>For a email with your high compared to our average</h3>
         <label htmlFor="name">Name:</label><br></br>
