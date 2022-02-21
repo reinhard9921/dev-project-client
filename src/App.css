@@ -1,46 +1,55 @@
-.App {
-  text-align: center;
-
-
-}
-html { 
-  background: url(../images/wallpaper.jpg) no-repeat center center fixed; 
+/*HTML -- MAIN BODY*/
+html {
+  background: url(../src/images/wallpaper.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 
+body {
+  text-align: center;
+}
 
-input[type=text] {
+span {
+  color: "red";
+}
+
+/*All Input Fields*/
+input[type="text"] {
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
-   border-radius: 20px;
-   border: 2px solid white;
-   color: black;
-   width: 250px;
-   height: 30px;
-   padding-left: 10px;
+  border-radius: 20px;
+  border: 2px solid white;
+  color: black;
+  width: 250px;
+  height: 30px;
+  padding-left: 10px;
 }
-input[type=text]:focus {
+input[type="text"]:focus {
   outline: none;
-  border: 2px solid #FF3366;
+  border: 2px solid #ff3366;
   background-color: white;
   color: black;
 }
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: grey;
   opacity: 1; /* Firefox */
 }
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
   color: grey;
 }
 
-::-ms-input-placeholder { /* Microsoft Edge */
+::-ms-input-placeholder {
+  /* Microsoft Edge */
   color: grey;
 }
+
+/*ALL BUTTONS*/
 button {
-  background-color: #FF3366; /* Green */
+  background-color: #ff3366;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -50,15 +59,16 @@ button {
   font-size: 16px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
-   border-radius: 20px;
-   border: 2px solid white;
+  border-radius: 20px;
+  border: 2px solid white;
 }
 
 button:hover {
-  background-color: #E50039; /* Green */
+  background-color: #e50039;
 }
-.page_wrap
-{
+
+/*CLASSES FOR STYLING*/
+.page_wrap {
   background-color: rgba(255, 255, 255, 0.288);
   backdrop-filter: blur(5px);
   border-radius: 25px;
@@ -68,19 +78,8 @@ button:hover {
   transform: translate(-50%, -50%);
   text-align: center;
   font-weight: bold;
-display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
 }
-
-.content
-{
-  alignSelf:'baseline';
-}
-body
-{
-  text-align: center; /* required by some browsers */
-}
-
-
