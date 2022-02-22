@@ -11,10 +11,6 @@ function AddUserApp() {
   const [_emailError, set_EmailError] = useState();
   const [_heightError, set_heightError] = useState();
   const [_nameError, set_nameError] = useState();
-  const [_showModal, set_ShowModal] = useState(false);
-  const openModal = () => {
-    set_ShowModal(true);
-  };
 
   /*FUNCTIONS */
   function emailValidation(e) {
@@ -110,7 +106,6 @@ function AddUserApp() {
         <br />
         <br />
       </form>
-      {_showModal ? <Modal setShowModal={set_ShowModal} /> : null}
     </div>
   );
 }
