@@ -68,7 +68,7 @@ function AddUserApp() {
       <form onSubmit={emailValidation}>
         <br />
         <h2>Please enter your height</h2>
-        <h3>For a email with your high compared to our average</h3>
+        <h3>For a email with your height compared to our average</h3>
         <label htmlFor="name">Name:</label>
         <br />
         <input
