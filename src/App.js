@@ -1,8 +1,6 @@
 import "./App.css";
 import React from "react";
 import Axios from "axios";
-import { Modal } from "./Modal";
-
 const useState = React.useState;
 
 function AddUserApp() {
