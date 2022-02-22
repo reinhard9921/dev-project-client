@@ -16,7 +16,7 @@
     "webfontloader": "^1.6.28"
   },
   "engines": { 
-    "node": "8.3.1" 
+    "node": "6.11.1"
   } ,
   "scripts": {
     "start": "react-scripts start",
