@@ -1,6 +1,7 @@
 import "./App.css";
 import React from "react";
 import Axios from "axios";
+import { Modal } from "./Modal";
 
 const useState = React.useState;
 
@@ -9,9 +10,13 @@ function AddUserApp() {
   const [_userName, set_userName] = useState();
   const [_userHeight, set_userHeight] = useState();
   const [_userEmail, set_userEmail] = useState();
-  const [emailError, set_EmailError] = useState();
-  const [heightError, set_heightError] = useState();
-  const [nameError, set_nameError] = useState();
+  const [_emailError, set_EmailError] = useState();
+  const [_heightError, set_heightError] = useState();
+  const [_nameError, set_nameError] = useState();
+  const [_showModal, set_ShowModal] = useState(false);
+  const openModal = () => {
+    set_ShowModal(true);
+  };
 
   /*FUNCTIONS */
   function emailValidation(e) {
@@ -53,7 +58,6 @@ function AddUserApp() {
       "https://serverside-project-dev.herokuapp.com/api/insertuser",
       params
     );
-
     set_userName("");
     set_userHeight("");
     set_userEmail("");
@@ -78,7 +82,7 @@ function AddUserApp() {
           onChange={(e) => set_userName(e.target.value)}
         ></input>
         <br />
-        <span>{nameError}</span>
+        <span>{_nameError}</span>
         <br />
         <label htmlFor="height">Height (cm):</label>
         <br />
@@ -89,7 +93,7 @@ function AddUserApp() {
           onChange={(e) => set_userHeight(e.target.value)}
         ></input>
         <br />
-        <span>{heightError}</span>
+        <span>{_heightError}</span>
         <br />
         <label htmlFor="email">Email:</label>
         <br />
@@ -100,7 +104,7 @@ function AddUserApp() {
           onChange={(e) => set_userEmail(e.target.value)}
         ></input>
         <br />
-        <span>{emailError}</span>
+        <span>{_emailError}</span>
         <br />
         <br />
 
@@ -108,6 +112,7 @@ function AddUserApp() {
         <br />
         <br />
       </form>
+      {_showModal ? <Modal setShowModal={set_ShowModal} /> : null}
     </div>
   );
 }
