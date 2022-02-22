@@ -5,13 +5,15 @@ import Axios from "axios";
 const useState = React.useState;
 
 function AddUserApp() {
+  /*VARIABLES*/
   const [_userName, set_userName] = useState();
   const [_userHeight, set_userHeight] = useState();
   const [_userEmail, set_userEmail] = useState();
-  const [emailError, setEmailError] = useState();
-  const [heightError, setheightError] = useState();
-  const [nameError, setnameError] = useState();
+  const [emailError, set_EmailError] = useState();
+  const [heightError, set_heightError] = useState();
+  const [nameError, set_nameError] = useState();
 
+  /*FUNCTIONS */
   function emailValidation(e) {
     e.preventDefault();
 
@@ -19,16 +21,16 @@ function AddUserApp() {
       // eslint-disable-next-line no-useless-escape
       /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
     if (!_userEmail || regexemail.test(_userEmail) === false) {
-      setEmailError("Enter valid email");
+      set_EmailError("Enter valid email");
     }
 
     const regexNumber = /^[0-9\b]+$/;
     if (!_userHeight || regexNumber.test(_userHeight) === false) {
-      setheightError("Enter valid number");
+      set_heightError("Enter valid number");
     }
 
     if (!_userName) {
-      setnameError("Enter a name");
+      set_nameError("Enter a name");
     }
 
     if (
@@ -55,11 +57,12 @@ function AddUserApp() {
     set_userName("");
     set_userHeight("");
     set_userEmail("");
-    setEmailError("");
-    setheightError("");
-    setnameError("");
+    set_EmailError("");
+    set_heightError("");
+    set_nameError("");
   }
 
+  /*RETRUN */
   return (
     <div className="page_wrap">
       <form onSubmit={emailValidation}>
@@ -108,4 +111,5 @@ function AddUserApp() {
     </div>
   );
 }
+
 export default AddUserApp;
